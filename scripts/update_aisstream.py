@@ -16,6 +16,8 @@ BOX = [[[-35.15, -59.05], [-34.30, -57.65]]]
 OUTPUT = Path("data/ais.json")
 WINDOW_SECONDS = 120
 MAX_AGE_SECONDS = 30 * 60
+MAX_RETRIES = 3
+MAX_ATTEMPTS = MAX_RETRIES + 1
 
 
 def utc_now():
@@ -97,8 +99,27 @@ async def capture():
     return latest, counts
 
 
+async def capture_with_retries():
+    all_counts = collections.Counter()
+    last_error = None
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        try:
+            current, counts = await capture()
+            all_counts.update(counts)
+            if current:
+                return current, all_counts, attempt, None
+            last_error = "No se recibieron posiciones durante la captura."
+            print(f"Sin posiciones AIS en el intento {attempt}/{MAX_ATTEMPTS}.")
+        except Exception as exc:
+            last_error = f"{type(exc).__name__}: {str(exc)[:240]}".replace(KEY, "[oculto]")
+            print(f"Falló AIS en el intento {attempt}/{MAX_ATTEMPTS}: {last_error}")
+        if attempt < MAX_ATTEMPTS:
+            await asyncio.sleep(5 * attempt)
+    return {}, all_counts, MAX_ATTEMPTS, last_error
+
+
 async def main():
-    current, counts = await capture()
+    current, counts, attempts, last_error = await capture_with_retries()
     now = utc_now()
     previous = {}
     if OUTPUT.exists():
@@ -117,6 +138,9 @@ async def main():
         "area": "Dock Sud / Río de la Plata",
         "timezone": "America/Argentina/Buenos_Aires",
         "window_seconds": WINDOW_SECONDS,
+        "attempts_made": attempts,
+        "max_retries": MAX_RETRIES,
+        "last_error": last_error,
         "message_count": sum(counts.values()),
         "messages": dict(counts),
         "unique_mmsi_in_window": len(current),
@@ -129,10 +153,13 @@ async def main():
     temp.replace(OUTPUT)
     print(json.dumps({
         "updated_at": result["updated_at"],
+        "attempts_made": attempts,
+        "max_retries": MAX_RETRIES,
         "message_count": result["message_count"],
         "unique_mmsi_in_window": len(current),
         "coverage_confirmed": result["coverage_confirmed"],
         "published_positions": len(result["vessels"]),
+        "last_error": last_error,
     }, ensure_ascii=False))
 
 
