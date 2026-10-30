@@ -1,0 +1,261 @@
+{
+  "updated_at": "2026-10-30T11:32:52.374182+00:00",
+  "source": "https://transcargoarg.com/",
+  "timezone": "America/Argentina/Buenos_Aires",
+  "vessels": [
+    {
+      "name": "MSC MARIA MARILYN X",
+      "eta": "2026-10-17T14:00",
+      "status": "ARRIBADO",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "BREMERHAVEN EXPRESS",
+      "eta": "2026-10-19T16:00",
+      "status": "ARRIBADO",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC STELLA M X",
+      "eta": "2026-10-21T10:00",
+      "status": "ARRIBADO",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "CAPE PIONEER",
+      "eta": "2026-10-22T01:00",
+      "status": "ARRIBADO",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC GIULIA",
+      "eta": "2026-10-24T03:00",
+      "status": "ARRIBADO",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC BUSAN VIII",
+      "eta": "2026-10-25T13:00",
+      "status": "ARRIBADO",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "CZECH",
+      "eta": "2026-10-27T23:00",
+      "status": "ARRIBADO",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "SANTA VANESSA",
+      "eta": "2026-10-28T21:00",
+      "status": "ARRIBADO",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC SHUBA B",
+      "eta": "2026-10-29T12:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC AVNI",
+      "eta": "2026-11-03T20:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "PALENA",
+      "eta": "2026-11-04T20:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "CONTI CONQUEST",
+      "eta": "2026-11-05T14:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC ADELE",
+      "eta": "2026-11-09T07:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "ONE PARANA",
+      "eta": "2026-11-10T21:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "PATMOS EXPRESS",
+      "eta": "2026-11-11T19:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "DALIAN EXPRESS",
+      "eta": "2026-11-12T07:00",
+      "status": "CANCELADO",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC LETICIA",
+      "eta": "2026-11-12T15:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "PARANA EXPRESS",
+      "eta": "2026-11-17T21:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "ONE AMAZON",
+      "eta": "2026-11-23T23:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC AINO",
+      "eta": "2026-11-24T20:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC MIGSAN",
+      "eta": "2026-11-30T07:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    }
+  ],
+  "history": [
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "MSC MARIA MARILYN X",
+      "type": "nuevo",
+      "eta": "2026-10-17T14:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "BREMERHAVEN EXPRESS",
+      "type": "nuevo",
+      "eta": "2026-10-19T16:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "MSC STELLA M X",
+      "type": "nuevo",
+      "eta": "2026-10-21T10:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "CAPE PIONEER",
+      "type": "nuevo",
+      "eta": "2026-10-22T01:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "MSC GIULIA",
+      "type": "nuevo",
+      "eta": "2026-10-24T03:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "MSC BUSAN VIII",
+      "type": "nuevo",
+      "eta": "2026-10-25T13:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "CZECH",
+      "type": "nuevo",
+      "eta": "2026-10-27T23:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "SANTA VANESSA",
+      "type": "nuevo",
+      "eta": "2026-10-28T21:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "MSC SHUBA B",
+      "type": "nuevo",
+      "eta": "2026-10-29T12:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "MSC AVNI",
+      "type": "nuevo",
+      "eta": "2026-11-03T20:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "PALENA",
+      "type": "nuevo",
+      "eta": "2026-11-04T20:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "CONTI CONQUEST",
+      "type": "nuevo",
+      "eta": "2026-11-05T14:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "MSC ADELE",
+      "type": "nuevo",
+      "eta": "2026-11-09T07:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "ONE PARANA",
+      "type": "nuevo",
+      "eta": "2026-11-10T21:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "PATMOS EXPRESS",
+      "type": "nuevo",
+      "eta": "2026-11-11T19:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "MSC LETICIA",
+      "type": "nuevo",
+      "eta": "2026-11-12T15:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "DALIAN EXPRESS",
+      "type": "nuevo",
+      "eta": "2026-11-12T07:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "PARANA EXPRESS",
+      "type": "nuevo",
+      "eta": "2026-11-17T21:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "ONE AMAZON",
+      "type": "nuevo",
+      "eta": "2026-11-23T23:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "MSC AINO",
+      "type": "nuevo",
+      "eta": "2026-11-24T20:00"
+    },
+    {
+      "at": "2026-10-30T11:32:52.374182+00:00",
+      "ship": "MSC MIGSAN",
+      "type": "nuevo",
+      "eta": "2026-11-30T07:00"
+    }
+  ]
+}
