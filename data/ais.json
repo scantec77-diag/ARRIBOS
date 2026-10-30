@@ -1,0 +1,12 @@
+{
+  "updated_at": null,
+  "source": "AISStream",
+  "area": "Dock Sud / Río de la Plata",
+  "timezone": "America/Argentina/Buenos_Aires",
+  "window_seconds": 120,
+  "message_count": 0,
+  "messages": {},
+  "unique_mmsi_in_window": 0,
+  "coverage_confirmed": false,
+  "vessels": []
+}
