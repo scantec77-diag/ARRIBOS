@@ -1,0 +1,20 @@
+name: Probar cobertura AISStream Dock Sud
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cobertura:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar cliente WebSocket
+        run: python -m pip install 'websockets>=12,<16'
+      - name: Probar cobertura AIS por 2 minutos
+        env:
+          AISSTREAM_API_KEY: ${{ secrets.AISSTREAM_API_KEY }}
+        run: python scripts/test_aisstream.py
