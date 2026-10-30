@@ -1,51 +1,19 @@
 {
-  "updated_at": "2026-10-30T11:57:33.561055+00:00",
+  "updated_at": "2026-10-30T12:39:51.080682+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
   "window_seconds": 120,
-  "attempts_made": 1,
+  "attempts_made": 4,
   "max_retries": 3,
-  "last_error": null,
-  "message_count": 4,
+  "last_error": "AIS recibió posiciones, pero ninguna coincidió con la lista activa de Exolgan.",
+  "message_count": 11,
   "messages": {
-    "PositionReport": 3,
-    "StandardClassBPositionReport": 1
+    "StandardClassBPositionReport": 5,
+    "PositionReport": 6
   },
-  "unique_mmsi_in_window": 4,
-  "coverage_confirmed": true,
-  "vessels": [
-    {
-      "mmsi": "701001180",
-      "name": "ACACIA",
-      "lat": -34.42848,
-      "lon": -58.55452,
-      "last_seen": "2026-10-30T11:57:32.269363+00:00",
-      "message_type": "StandardClassBPositionReport"
-    },
-    {
-      "mmsi": "701501000",
-      "name": "GC 78 MADRYN",
-      "lat": -34.41623,
-      "lon": -58.57954,
-      "last_seen": "2026-10-30T11:55:40.627951+00:00",
-      "message_type": "PositionReport"
-    },
-    {
-      "mmsi": "314781000",
-      "name": "MAJESTIC VERA",
-      "lat": -34.30113,
-      "lon": -58.52281,
-      "last_seen": "2026-10-30T11:56:33.933770+00:00",
-      "message_type": "PositionReport"
-    },
-    {
-      "mmsi": "701006355",
-      "name": "ZELANDIA",
-      "lat": -34.39806,
-      "lon": -58.44351,
-      "last_seen": "2026-10-30T11:56:40.504206+00:00",
-      "message_type": "PositionReport"
-    }
-  ]
+  "region_vessels_in_window": 8,
+  "unique_mmsi_in_window": 0,
+  "coverage_confirmed": false,
+  "vessels": []
 }
