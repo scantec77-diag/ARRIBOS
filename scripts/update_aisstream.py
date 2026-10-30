@@ -40,8 +40,10 @@ def position_from(event):
     message = event.get("Message") or {}
     payload = message.get(message_type) or {}
     try:
-        lat = float(metadata.get("latitude", payload.get("Latitude")))
-        lon = float(metadata.get("longitude", payload.get("Longitude")))
+        lat_value = metadata.get("latitude")
+        lon_value = metadata.get("longitude")
+        lat = float(payload.get("Latitude") if lat_value is None else lat_value)
+        lon = float(payload.get("Longitude") if lon_value is None else lon_value)
     except (TypeError, ValueError):
         return None
     if not (-90 <= lat <= 90 and -180 <= lon <= 180):
