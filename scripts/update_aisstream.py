@@ -12,7 +12,10 @@ import websockets
 KEY = os.environ.get("AISSTREAM_API_KEY")
 if not KEY:
     raise SystemExit("Falta AISSTREAM_API_KEY en GitHub Actions.")
-BOX = [[[-35.15, -59.05], [-34.30, -57.65]]]
+BOX = [
+    [[-35.15, -59.05], [-34.30, -57.65]],  # Dock Sud / Exolgan
+    [[-36.20, -57.80], [-34.30, -55.00]],  # Río exterior / aproximación
+]
 OUTPUT = Path("data/ais.json")
 WINDOW_SECONDS = 120
 MAX_AGE_SECONDS = 30 * 60
@@ -42,8 +45,8 @@ def position_from(event):
     message = event.get("Message") or {}
     payload = message.get(message_type) or {}
     try:
-        lat_value = metadata.get("latitude")
-        lon_value = metadata.get("longitude")
+        lat_value = metadata.get("Latitude", metadata.get("latitude"))
+        lon_value = metadata.get("Longitude", metadata.get("longitude"))
         lat = float(payload.get("Latitude") if lat_value is None else lat_value)
         lon = float(payload.get("Longitude") if lon_value is None else lon_value)
     except (TypeError, ValueError):
