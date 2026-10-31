@@ -1,19 +1,31 @@
 {
-  "updated_at": "2026-10-31T09:28:54.757643+00:00",
+  "updated_at": "2026-10-31T10:04:30.523143+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
   "window_seconds": 120,
-  "attempts_made": 4,
+  "attempts_made": 3,
   "max_retries": 3,
-  "last_error": "AIS recibió posiciones, pero ninguna coincidió con la lista activa de Exolgan.",
-  "message_count": 11,
+  "last_error": null,
+  "message_count": 7,
   "messages": {
-    "PositionReport": 9,
+    "PositionReport": 5,
     "StandardClassBPositionReport": 2
   },
   "region_vessels_in_window": 7,
-  "unique_mmsi_in_window": 0,
-  "coverage_confirmed": false,
-  "vessels": []
+  "unique_mmsi_in_window": 1,
+  "coverage_confirmed": true,
+  "vessels": [
+    {
+      "mmsi": "255806027",
+      "name": "MSC SHUBA B",
+      "lat": -34.6411,
+      "lon": -58.34363,
+      "last_seen": "2026-10-31T10:03:53.221094+00:00",
+      "message_type": "PositionReport",
+      "schedule_name": "MSC SHUBA B",
+      "schedule_status": "ARRIBADO",
+      "eta": "2026-10-29T12:00"
+    }
+  ]
 }
