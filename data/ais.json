@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T08:36:11.104814+00:00",
+  "updated_at": "2026-11-01T09:20:56.987055+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
@@ -7,10 +7,10 @@
   "attempts_made": 4,
   "max_retries": 3,
   "last_error": "AIS recibió posiciones, pero ninguna coincidió con la lista activa de Exolgan.",
-  "message_count": 2,
+  "message_count": 4,
   "messages": {
-    "StandardClassBPositionReport": 1,
-    "PositionReport": 1
+    "PositionReport": 2,
+    "StandardClassBPositionReport": 2
   },
   "region_vessels_in_window": 2,
   "unique_mmsi_in_window": 0,
