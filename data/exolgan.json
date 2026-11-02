@@ -1,38 +1,8 @@
 {
-  "updated_at": "2026-11-02T15:26:14.842411+00:00",
+  "updated_at": "2026-11-02T16:26:59.198342+00:00",
   "source": "https://transcargoarg.com/",
   "timezone": "America/Argentina/Buenos_Aires",
   "vessels": [
-    {
-      "name": "MSC MARIA MARILYN X",
-      "eta": "2026-10-17T14:00",
-      "status": "ARRIBADO",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "BREMERHAVEN EXPRESS",
-      "eta": "2026-10-19T16:00",
-      "status": "ARRIBADO",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "MSC STELLA M X",
-      "eta": "2026-10-21T10:00",
-      "status": "ARRIBADO",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "CAPE PIONEER",
-      "eta": "2026-10-22T01:00",
-      "status": "ARRIBADO",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "MSC GIULIA",
-      "eta": "2026-10-24T03:00",
-      "status": "ARRIBADO",
-      "terminal": "EXOLGAN"
-    },
     {
       "name": "MSC BUSAN VIII",
       "eta": "2026-10-25T13:00",
@@ -59,7 +29,7 @@
     },
     {
       "name": "MSC AVNI",
-      "eta": "2026-11-04T03:00",
+      "eta": "2026-11-04T11:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
@@ -71,7 +41,7 @@
     },
     {
       "name": "CONTI CONQUEST",
-      "eta": "2026-11-06T01:00",
+      "eta": "2026-11-06T12:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
@@ -301,6 +271,50 @@
       "ship": "LE HAVRE EXPRESS",
       "type": "nuevo",
       "eta": "2026-11-18T19:00"
+    },
+    {
+      "at": "2026-11-02T16:26:59.198342+00:00",
+      "ship": "MSC AVNI",
+      "type": "eta",
+      "before": "2026-11-04T03:00",
+      "after": "2026-11-04T11:00"
+    },
+    {
+      "at": "2026-11-02T16:26:59.198342+00:00",
+      "ship": "CONTI CONQUEST",
+      "type": "eta",
+      "before": "2026-11-06T01:00",
+      "after": "2026-11-06T12:00"
+    },
+    {
+      "at": "2026-11-02T16:26:59.198342+00:00",
+      "ship": "MSC MARIA MARILYN X",
+      "type": "ausente_de_lista",
+      "before": "2026-10-17T14:00"
+    },
+    {
+      "at": "2026-11-02T16:26:59.198342+00:00",
+      "ship": "BREMERHAVEN EXPRESS",
+      "type": "ausente_de_lista",
+      "before": "2026-10-19T16:00"
+    },
+    {
+      "at": "2026-11-02T16:26:59.198342+00:00",
+      "ship": "MSC STELLA M X",
+      "type": "ausente_de_lista",
+      "before": "2026-10-21T10:00"
+    },
+    {
+      "at": "2026-11-02T16:26:59.198342+00:00",
+      "ship": "CAPE PIONEER",
+      "type": "ausente_de_lista",
+      "before": "2026-10-22T01:00"
+    },
+    {
+      "at": "2026-11-02T16:26:59.198342+00:00",
+      "ship": "MSC GIULIA",
+      "type": "ausente_de_lista",
+      "before": "2026-10-24T03:00"
     }
   ]
 }
