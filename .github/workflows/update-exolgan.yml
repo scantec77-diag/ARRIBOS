@@ -28,11 +28,11 @@ jobs:
         run: python scripts/update_exolgan.py
       - name: Instalar cliente AIS
         run: python -m pip install 'websockets>=12,<16'
-      - name: Capturar posiciones AIS durante 2 minutos
+      - name: Capturar AIS (máximo 3 minutos, publicar resultados)
         continue-on-error: true
         env:
           AISSTREAM_API_KEY: ${{ secrets.AISSTREAM_API_KEY }}
-        run: python scripts/update_aisstream.py
+        run: timeout --signal=TERM --kill-after=5s 180s python -u scripts/update_aisstream.py
       - name: Publicar datos actualizados
         run: |
           git config user.name "github-actions[bot]"
