@@ -29,12 +29,22 @@ jobs:
       - name: Instalar cliente AIS
         run: python -m pip install 'websockets>=12,<16'
       - name: Capturar AIS (máximo 3 minutos, publicar resultados)
+        id: ais_capture
         continue-on-error: true
         env:
           AISSTREAM_API_KEY: ${{ secrets.AISSTREAM_API_KEY }}
-        run: timeout --signal=TERM --kill-after=5s 180s python -u scripts/update_aisstream.py
-      - name: Publicar datos actualizados
         run: |
+          mkdir -p debug
+          set -o pipefail
+          timeout --signal=TERM --kill-after=5s 180s python -u scripts/update_aisstream.py 2>&1 | tee debug/captura-ais.log
+          estado=${PIPESTATUS[0]}
+          echo "capture_exit_code=$estado" >> "$GITHUB_OUTPUT"
+          echo "Código de salida de captura AIS: $estado" | tee -a debug/captura-ais.log
+          exit "$estado"
+      - name: Publicar datos actualizados
+        id: publish_data
+        run: |
+          exec > >(tee debug/publicacion.log) 2>&1
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -61,3 +71,30 @@ jobs:
           done
           echo "::error::No se pudo publicar después de 5 intentos."
           exit 1
+      - name: Guardar volcado de depuración
+        if: always()
+        run: |
+          mkdir -p debug
+          {
+            echo "run_id=$GITHUB_RUN_ID"
+            echo "run_attempt=$GITHUB_RUN_ATTEMPT"
+            echo "workflow=$GITHUB_WORKFLOW"
+            echo "commit=$GITHUB_SHA"
+            echo "timestamp_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            echo "job_status=${{ job.status }}"
+            echo "capture_outcome=${{ steps.ais_capture.outcome }}"
+            echo "publish_outcome=${{ steps.publish_data.outcome }}"
+          } > debug/resumen.txt
+          for archivo in data/ais.json data/exolgan.json; do
+            if [ -f "$archivo" ]; then
+              cp "$archivo" "debug/$(basename "$archivo")"
+            fi
+          done
+      - name: Subir archivo de depuración
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: depuracion-ais-${{ github.run_id }}-${{ github.run_attempt }}
+          path: debug/
+          retention-days: 14
+          if-no-files-found: warn
