@@ -20,6 +20,7 @@ BOX = [
 OUTPUT = Path("data/ais.json")
 EXOLGAN_DATA = Path("data/exolgan.json")
 WINDOW_SECONDS = 120
+MAX_TOTAL_SECONDS = 170
 MAX_AGE_SECONDS = 30 * 60
 MAX_RETRIES = 3
 MAX_ATTEMPTS = MAX_RETRIES + 1
@@ -110,7 +111,7 @@ def position_from(event):
     }
 
 
-async def capture():
+async def capture(window_seconds=WINDOW_SECONDS):
     latest = {}
     counts = collections.Counter()
     async with websockets.connect(
@@ -128,7 +129,7 @@ async def capture():
                 "ExtendedClassBPositionReport",
             ],
         }))
-        deadline = asyncio.get_running_loop().time() + WINDOW_SECONDS
+        deadline = asyncio.get_running_loop().time() + window_seconds
         while asyncio.get_running_loop().time() < deadline:
             remaining = deadline - asyncio.get_running_loop().time()
             try:
@@ -149,9 +150,14 @@ async def capture_with_retries(manifest):
     all_counts = collections.Counter()
     all_positions = {}
     last_error = None
+    overall_deadline = asyncio.get_running_loop().time() + MAX_TOTAL_SECONDS
     for attempt in range(1, MAX_ATTEMPTS + 1):
         try:
-            current, counts = await capture()
+            remaining = overall_deadline - asyncio.get_running_loop().time()
+            if remaining <= 5:
+                last_error = last_error or 'Tiempo máximo de captura alcanzado.'
+                break
+            current, counts = await capture(window_seconds=min(WINDOW_SECONDS, remaining - 5))
             all_counts.update(counts)
             all_positions.update(current)
             matched = [
@@ -170,8 +176,11 @@ async def capture_with_retries(manifest):
             last_error = f"{type(exc).__name__}: {str(exc)[:240]}".replace(KEY, "[oculto]")
             print(f"Falló AIS en el intento {attempt}/{MAX_ATTEMPTS}: {last_error}")
         if attempt < MAX_ATTEMPTS:
-            await asyncio.sleep(5 * attempt)
-    return all_positions, all_counts, MAX_ATTEMPTS, last_error
+            remaining = overall_deadline - asyncio.get_running_loop().time()
+            if remaining <= 5:
+                break
+            await asyncio.sleep(min(5 * attempt, max(0, remaining - 5)))
+    return all_positions, all_counts, attempt, last_error
 
 
 async def main():
@@ -203,6 +212,7 @@ async def main():
         "area": "Dock Sud / Río de la Plata",
         "timezone": "America/Argentina/Buenos_Aires",
         "window_seconds": WINDOW_SECONDS,
+        "max_total_seconds": MAX_TOTAL_SECONDS,
         "attempts_made": attempts,
         "max_retries": MAX_RETRIES,
         "last_error": last_error,
