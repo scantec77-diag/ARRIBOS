@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T20:53:02.831303+00:00",
+  "updated_at": "2026-11-05T21:31:08.114757+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
@@ -7,7 +7,7 @@
   "max_total_seconds": 170,
   "attempts_made": 2,
   "max_retries": 3,
-  "last_error": "No se recibieron posiciones AIS durante la captura.",
+  "last_error": "AIS recibió posiciones, pero ninguna coincidió con la lista activa de Exolgan.",
   "message_count": 1,
   "messages": {
     "PositionReport": 1
