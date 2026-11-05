@@ -35,11 +35,29 @@ jobs:
         run: timeout --signal=TERM --kill-after=5s 180s python -u scripts/update_aisstream.py
       - name: Publicar datos actualizados
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/exolgan.json data/ais.json
-          if ! git diff --cached --quiet; then
+          # Guardar los archivos generados antes de sincronizar con main.
+          cp data/exolgan.json "$RUNNER_TEMP/exolgan.json"
+          cp data/ais.json "$RUNNER_TEMP/ais.json"
+          for intento in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp "$RUNNER_TEMP/exolgan.json" data/exolgan.json
+            cp "$RUNNER_TEMP/ais.json" data/ais.json
+            git add data/exolgan.json data/ais.json
+            if git diff --cached --quiet; then
+              echo "Sin cambios para publicar."
+              exit 0
+            fi
             git commit -m "Actualizar datos Exolgan y AIS"
-            git pull --rebase origin main
-            git push
-          fi
+            if git push origin HEAD:main; then
+              echo "Datos publicados correctamente."
+              exit 0
+            fi
+            echo "La rama cambió durante la publicación; reintentando ($intento/5)."
+            sleep 3
+          done
+          echo "::error::No se pudo publicar después de 5 intentos."
+          exit 1
