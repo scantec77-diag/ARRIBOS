@@ -1,20 +1,31 @@
 {
-  "updated_at": "2026-11-06T21:46:37.794552+00:00",
+  "updated_at": "2026-11-06T22:24:35.120614+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
   "window_seconds": 120,
   "max_total_seconds": 170,
-  "attempts_made": 2,
+  "attempts_made": 1,
   "max_retries": 3,
-  "last_error": "AIS recibió posiciones, pero ninguna coincidió con la lista activa de Exolgan.",
-  "message_count": 4,
+  "last_error": null,
+  "message_count": 3,
   "messages": {
-    "PositionReport": 3,
-    "StandardClassBPositionReport": 1
+    "PositionReport": 3
   },
-  "region_vessels_in_window": 4,
-  "unique_mmsi_in_window": 0,
-  "coverage_confirmed": false,
-  "vessels": []
+  "region_vessels_in_window": 2,
+  "unique_mmsi_in_window": 1,
+  "coverage_confirmed": true,
+  "vessels": [
+    {
+      "mmsi": "636093041",
+      "name": "CONTI CONQUEST",
+      "lat": -34.64114,
+      "lon": -58.34296,
+      "last_seen": "2026-11-06T22:24:03.919031+00:00",
+      "message_type": "PositionReport",
+      "schedule_name": "CONTI CONQUEST",
+      "schedule_status": "ARRIBADO",
+      "eta": "2026-11-05T06:00"
+    }
+  ]
 }
