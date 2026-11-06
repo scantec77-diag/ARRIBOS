@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T20:28:41.440735+00:00",
+  "updated_at": "2026-11-06T21:11:13.619426+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
@@ -8,9 +8,11 @@
   "attempts_made": 2,
   "max_retries": 3,
   "last_error": "No se recibieron posiciones AIS durante la captura.",
-  "message_count": 0,
-  "messages": {},
-  "region_vessels_in_window": 0,
+  "message_count": 5,
+  "messages": {
+    "PositionReport": 5
+  },
+  "region_vessels_in_window": 5,
   "unique_mmsi_in_window": 0,
   "coverage_confirmed": false,
   "vessels": []
