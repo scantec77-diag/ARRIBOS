@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T05:43:57.892980+00:00",
+  "updated_at": "2026-11-07T06:30:42.125694+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
@@ -7,13 +7,25 @@
   "max_total_seconds": 170,
   "attempts_made": 2,
   "max_retries": 3,
-  "last_error": "No se recibieron posiciones AIS durante la captura.",
-  "message_count": 1,
+  "last_error": null,
+  "message_count": 3,
   "messages": {
-    "StandardClassBPositionReport": 1
+    "PositionReport": 3
   },
-  "region_vessels_in_window": 1,
-  "unique_mmsi_in_window": 0,
-  "coverage_confirmed": false,
-  "vessels": []
+  "region_vessels_in_window": 3,
+  "unique_mmsi_in_window": 1,
+  "coverage_confirmed": true,
+  "vessels": [
+    {
+      "mmsi": "636018068",
+      "name": "MSC AVNI",
+      "lat": -34.61497,
+      "lon": -58.2188,
+      "last_seen": "2026-11-07T06:30:11.198179+00:00",
+      "message_type": "PositionReport",
+      "schedule_name": "MSC AVNI",
+      "schedule_status": "EN VIAJE",
+      "eta": "2026-11-07T01:00"
+    }
+  ]
 }
