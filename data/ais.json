@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T09:55:35.574427+00:00",
+  "updated_at": "2026-11-07T10:29:04.022771+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
@@ -7,14 +7,25 @@
   "max_total_seconds": 170,
   "attempts_made": 2,
   "max_retries": 3,
-  "last_error": "AIS recibió posiciones, pero ninguna coincidió con la lista activa de Exolgan.",
-  "message_count": 4,
+  "last_error": null,
+  "message_count": 6,
   "messages": {
-    "PositionReport": 3,
-    "StandardClassBPositionReport": 1
+    "PositionReport": 6
   },
-  "region_vessels_in_window": 4,
-  "unique_mmsi_in_window": 0,
-  "coverage_confirmed": false,
-  "vessels": []
+  "region_vessels_in_window": 6,
+  "unique_mmsi_in_window": 1,
+  "coverage_confirmed": true,
+  "vessels": [
+    {
+      "mmsi": "636018068",
+      "name": "MSC AVNI",
+      "lat": -34.6411,
+      "lon": -58.34348,
+      "last_seen": "2026-11-07T10:28:48.171359+00:00",
+      "message_type": "PositionReport",
+      "schedule_name": "MSC AVNI",
+      "schedule_status": "EN VIAJE",
+      "eta": "2026-11-07T01:00"
+    }
+  ]
 }
