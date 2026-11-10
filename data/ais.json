@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T02:21:31.899080+00:00",
+  "updated_at": "2026-11-10T03:09:59.556946+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
@@ -12,7 +12,7 @@
   "messages": {
     "PositionReport": 2
   },
-  "region_vessels_in_window": 1,
+  "region_vessels_in_window": 2,
   "unique_mmsi_in_window": 0,
   "coverage_confirmed": false,
   "vessels": []
