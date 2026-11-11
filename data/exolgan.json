@@ -1,66 +1,30 @@
 {
-  "updated_at": "2026-11-11T14:30:44.126757+00:00",
+  "updated_at": "2026-11-11T15:17:34.633804+00:00",
   "source": "https://transcargoarg.com/",
   "timezone": "America/Argentina/Buenos_Aires",
   "vessels": [
     {
-      "name": "MSC BUSAN VIII",
-      "eta": "2026-10-25T13:00",
-      "status": "ARRIBADO",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "CZECH",
-      "eta": "2026-10-27T23:00",
-      "status": "ARRIBADO",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "SANTA VANESSA",
-      "eta": "2026-10-28T21:00",
-      "status": "ARRIBADO",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "MSC SHUBA B",
-      "eta": "2026-10-29T12:00",
-      "status": "ARRIBADO",
-      "terminal": "EXOLGAN"
-    },
-    {
       "name": "CONTI CONQUEST",
-      "eta": "2026-11-05T06:00",
+      "eta": "2026-11-05T07:00",
       "status": "ARRIBADO",
       "terminal": "EXOLGAN"
     },
     {
       "name": "MSC AVNI",
       "eta": "2026-11-07T01:00",
-      "status": "EN VIAJE",
+      "status": "ARRIBADO",
       "terminal": "EXOLGAN"
     },
     {
       "name": "PALENA",
       "eta": "2026-11-07T12:00",
-      "status": "EN VIAJE",
+      "status": "ARRIBADO",
       "terminal": "EXOLGAN"
     },
     {
       "name": "MSC ADELE",
-      "eta": "2026-11-09T08:00",
-      "status": "EN VIAJE",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "MSC LETICIA",
-      "eta": "2026-11-10T19:00",
-      "status": "EN VIAJE",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "PATMOS EXPRESS",
-      "eta": "2026-11-12T01:00",
-      "status": "EN VIAJE",
+      "eta": "2026-11-09T11:00",
+      "status": "ARRIBADO",
       "terminal": "EXOLGAN"
     },
     {
@@ -70,26 +34,44 @@
       "terminal": "EXOLGAN"
     },
     {
+      "name": "PATMOS EXPRESS",
+      "eta": "2026-11-13T15:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
       "name": "ONE PARANA",
-      "eta": "2026-11-12T10:00",
+      "eta": "2026-11-14T13:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC LETICIA X",
+      "eta": "2026-11-16T00:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
     {
       "name": "MSC CASSANDRE",
-      "eta": "2026-11-16T07:00",
-      "status": "EN VIAJE",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "PARANA EXPRESS",
-      "eta": "2026-11-17T21:00",
+      "eta": "2026-11-18T00:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
     {
       "name": "LE HAVRE EXPRESS",
       "eta": "2026-11-18T19:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "PARANA EXPRESS",
+      "eta": "2026-11-19T21:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC JEONGMIN",
+      "eta": "2026-11-21T13:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
@@ -106,20 +88,38 @@
       "terminal": "EXOLGAN"
     },
     {
+      "name": "MSC RIKKU",
+      "eta": "2026-11-27T07:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
       "name": "MSC MIGSAN",
-      "eta": "2026-11-30T07:00",
+      "eta": "2026-11-29T00:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
     {
       "name": "SAO PAULO EXPRESS",
-      "eta": "2026-12-01T20:00",
+      "eta": "2026-12-01T00:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "LE HAVRE",
+      "eta": "2026-12-02T00:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
     {
       "name": "MSC UNIFIC VI",
       "eta": "2026-12-03T07:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "SANTA CATARINA EXPRESS",
+      "eta": "2026-12-08T20:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     }
@@ -507,6 +507,143 @@
       "type": "eta",
       "before": "2026-12-04T00:00",
       "after": "2026-12-03T07:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "CONTI CONQUEST",
+      "type": "eta",
+      "before": "2026-11-05T06:00",
+      "after": "2026-11-05T07:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "MSC AVNI",
+      "type": "estado",
+      "before": "EN VIAJE",
+      "after": "ARRIBADO"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "PALENA",
+      "type": "estado",
+      "before": "EN VIAJE",
+      "after": "ARRIBADO"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "MSC ADELE",
+      "type": "eta",
+      "before": "2026-11-09T08:00",
+      "after": "2026-11-09T11:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "MSC ADELE",
+      "type": "estado",
+      "before": "EN VIAJE",
+      "after": "ARRIBADO"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "ONE PARANA",
+      "type": "eta",
+      "before": "2026-11-12T10:00",
+      "after": "2026-11-14T13:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "PATMOS EXPRESS",
+      "type": "eta",
+      "before": "2026-11-12T01:00",
+      "after": "2026-11-13T15:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "MSC LETICIA X",
+      "type": "nuevo",
+      "eta": "2026-11-16T00:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "MSC CASSANDRE",
+      "type": "eta",
+      "before": "2026-11-16T07:00",
+      "after": "2026-11-18T00:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "PARANA EXPRESS",
+      "type": "eta",
+      "before": "2026-11-17T21:00",
+      "after": "2026-11-19T21:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "MSC JEONGMIN",
+      "type": "nuevo",
+      "eta": "2026-11-21T13:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "MSC RIKKU",
+      "type": "nuevo",
+      "eta": "2026-11-27T07:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "MSC MIGSAN",
+      "type": "eta",
+      "before": "2026-11-30T07:00",
+      "after": "2026-11-29T00:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "LE HAVRE",
+      "type": "nuevo",
+      "eta": "2026-12-02T00:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "SAO PAULO EXPRESS",
+      "type": "eta",
+      "before": "2026-12-01T20:00",
+      "after": "2026-12-01T00:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "SANTA CATARINA EXPRESS",
+      "type": "nuevo",
+      "eta": "2026-12-08T20:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "MSC BUSAN VIII",
+      "type": "ausente_de_lista",
+      "before": "2026-10-25T13:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "CZECH",
+      "type": "ausente_de_lista",
+      "before": "2026-10-27T23:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "SANTA VANESSA",
+      "type": "ausente_de_lista",
+      "before": "2026-10-28T21:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "MSC SHUBA B",
+      "type": "ausente_de_lista",
+      "before": "2026-10-29T12:00"
+    },
+    {
+      "at": "2026-11-11T15:17:34.633804+00:00",
+      "ship": "MSC LETICIA",
+      "type": "ausente_de_lista",
+      "before": "2026-11-10T19:00"
     }
   ]
 }
