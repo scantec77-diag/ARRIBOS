@@ -1,19 +1,31 @@
 {
-  "updated_at": "2026-11-11T01:50:11.768190+00:00",
+  "updated_at": "2026-11-11T02:32:40.878675+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
   "window_seconds": 120,
   "max_total_seconds": 170,
-  "attempts_made": 2,
+  "attempts_made": 1,
   "max_retries": 3,
-  "last_error": "AIS recibió posiciones, pero ninguna coincidió con la lista activa de Exolgan.",
-  "message_count": 41,
+  "last_error": null,
+  "message_count": 36,
   "messages": {
-    "PositionReport": 41
+    "PositionReport": 36
   },
-  "region_vessels_in_window": 34,
-  "unique_mmsi_in_window": 0,
-  "coverage_confirmed": false,
-  "vessels": []
+  "region_vessels_in_window": 33,
+  "unique_mmsi_in_window": 1,
+  "coverage_confirmed": true,
+  "vessels": [
+    {
+      "mmsi": "636025331",
+      "name": "MSC ADELE",
+      "lat": -34.64102,
+      "lon": -58.34358,
+      "last_seen": "2026-11-11T02:31:58.533616+00:00",
+      "message_type": "PositionReport",
+      "schedule_name": "MSC ADELE",
+      "schedule_status": "EN VIAJE",
+      "eta": "2026-11-09T08:00"
+    }
+  ]
 }
