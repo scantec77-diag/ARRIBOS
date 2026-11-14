@@ -1,19 +1,31 @@
 {
-  "updated_at": "2026-11-14T09:53:28.311467+00:00",
+  "updated_at": "2026-11-14T10:27:57.227034+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
   "window_seconds": 120,
   "max_total_seconds": 170,
-  "attempts_made": 2,
+  "attempts_made": 1,
   "max_retries": 3,
-  "last_error": "No se recibieron posiciones AIS durante la captura.",
-  "message_count": 1,
+  "last_error": null,
+  "message_count": 2,
   "messages": {
-    "PositionReport": 1
+    "PositionReport": 2
   },
-  "region_vessels_in_window": 1,
-  "unique_mmsi_in_window": 0,
-  "coverage_confirmed": false,
-  "vessels": []
+  "region_vessels_in_window": 2,
+  "unique_mmsi_in_window": 1,
+  "coverage_confirmed": true,
+  "vessels": [
+    {
+      "mmsi": "248278000",
+      "name": "PATMOS EXPRESS",
+      "lat": -34.64102,
+      "lon": -58.34365,
+      "last_seen": "2026-11-14T10:26:18.692756+00:00",
+      "message_type": "PositionReport",
+      "schedule_name": "PATMOS EXPRESS",
+      "schedule_status": "EN VIAJE",
+      "eta": "2026-11-13T07:00"
+    }
+  ]
 }
