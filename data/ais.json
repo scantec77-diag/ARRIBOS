@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-17T18:21:24.103265+00:00",
+  "updated_at": "2026-11-17T19:28:47.338409+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
   "window_seconds": 120,
   "max_total_seconds": 170,
-  "attempts_made": 3,
+  "attempts_made": 2,
   "max_retries": 3,
   "last_error": "No se recibieron posiciones AIS durante la captura.",
   "message_count": 0,
