@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20T08:34:35.241313+00:00",
+  "updated_at": "2026-11-20T17:12:56.574000+00:00",
   "source": "https://transcargoarg.com/",
   "timezone": "America/Argentina/Buenos_Aires",
   "vessels": [
@@ -77,7 +77,13 @@
     },
     {
       "name": "COSTA RICA EXPRESS",
-      "eta": "2026-11-26T02:00",
+      "eta": "2026-11-26T03:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC RIKKU",
+      "eta": "2026-11-28T08:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
@@ -90,12 +96,6 @@
     {
       "name": "MSC UNIFIC VI",
       "eta": "2026-12-02T21:00",
-      "status": "EN VIAJE",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "MSC RIKKU",
-      "eta": "2026-12-03T02:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
@@ -974,6 +974,20 @@
       "ship": "MSC LICIA X",
       "type": "nuevo",
       "eta": "2026-12-18T07:00"
+    },
+    {
+      "at": "2026-11-20T17:12:56.574000+00:00",
+      "ship": "COSTA RICA EXPRESS",
+      "type": "eta",
+      "before": "2026-11-26T02:00",
+      "after": "2026-11-26T03:00"
+    },
+    {
+      "at": "2026-11-20T17:12:56.574000+00:00",
+      "ship": "MSC RIKKU",
+      "type": "eta",
+      "before": "2026-12-03T02:00",
+      "after": "2026-11-28T08:00"
     }
   ]
 }
