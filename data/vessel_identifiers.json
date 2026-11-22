@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "vessels": [
+    {
+      "name": "MSC CASSANDRE",
+      "imo": "9785471",
+      "mmsi": null,
+      "identity_source": "MarineTraffic screenshot supplied by user",
+      "position_reference": {
+        "place": "Navegantes, Santa Catarina, Brasil",
+        "speed_kmh": 0,
+        "observed_at_utc": null,
+        "verified_live": false
+      },
+      "destination": "EXOLGAN",
+      "scheduled_eta_local": "2026-11-24T00:00:00",
+      "timezone": "America/Argentina/Buenos_Aires"
+    }
+  ]
+}
