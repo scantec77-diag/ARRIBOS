@@ -77,10 +77,39 @@ def load_exolgan_manifest():
                 "schedule_name": vessel.get("name", ""),
                 "schedule_status": vessel.get("status", ""),
                 "eta": vessel.get("eta", ""),
+                "mmsi": str(vessel.get("mmsi") or "").strip(),
             }
     if not manifest:
         raise RuntimeError("La programación no contiene buques activos de Exolgan.")
     return manifest
+
+
+def resolve_schedule(vessel, manifest, known_mmsi=None):
+    """Prefer a verified MMSI, then exact normalized name. Never fuzzy-match vessels."""
+    mmsi = str(vessel.get("mmsi") or "").strip()
+    for entry in manifest.values():
+        if entry.get("mmsi") and entry["mmsi"] == mmsi:
+            return entry
+    if known_mmsi and mmsi in known_mmsi:
+        name = known_mmsi[mmsi]
+        return manifest.get(name)
+    return manifest.get(normalize_name(vessel.get("name")))
+
+
+def known_identifiers(manifest):
+    """Retain previously verified MMSI/name pairs, never invent an identity."""
+    result = {}
+    if OUTPUT.exists():
+        try:
+            old = json.loads(OUTPUT.read_text(encoding="utf-8"))
+            for vessel in old.get("vessels", []):
+                name = normalize_name(vessel.get("schedule_name") or vessel.get("name"))
+                mmsi = str(vessel.get("mmsi") or "").strip()
+                if name in manifest and mmsi:
+                    result[mmsi] = name
+        except (OSError, ValueError, TypeError):
+            pass
+    return result
 
 
 def position_from(event):
@@ -146,7 +175,7 @@ async def capture(window_seconds=WINDOW_SECONDS):
     return latest, counts
 
 
-async def capture_with_retries(manifest):
+async def capture_with_retries(manifest, known_mmsi):
     all_counts = collections.Counter()
     all_positions = {}
     last_error = None
@@ -162,7 +191,7 @@ async def capture_with_retries(manifest):
             all_positions.update(current)
             matched = [
                 vessel for vessel in current.values()
-                if normalize_name(vessel.get("name")) in manifest
+                if resolve_schedule(vessel, manifest, known_mmsi)
             ]
             if matched:
                 return all_positions, all_counts, attempt, None
@@ -185,11 +214,12 @@ async def capture_with_retries(manifest):
 
 async def main():
     manifest = load_exolgan_manifest()
-    observed, counts, attempts, last_error = await capture_with_retries(manifest)
+    known_mmsi = known_identifiers(manifest)
+    observed, counts, attempts, last_error = await capture_with_retries(manifest, known_mmsi)
     now = utc_now()
     matched = {}
     for mmsi, vessel in observed.items():
-        schedule = manifest.get(normalize_name(vessel.get("name")))
+        schedule = resolve_schedule(vessel, manifest, known_mmsi)
         if schedule:
             matched[mmsi] = {**vessel, **schedule}
     previous = {}
@@ -197,7 +227,7 @@ async def main():
         try:
             old = json.loads(OUTPUT.read_text(encoding="utf-8"))
             for vessel in old.get("vessels", []):
-                name_key = normalize_name(vessel.get("name"))
+                name_key = normalize_name(vessel.get("schedule_name") or vessel.get("name"))
                 if name_key not in manifest:
                     continue
                 seen = parse_time(vessel.get("last_seen"), now - dt.timedelta(days=1))
