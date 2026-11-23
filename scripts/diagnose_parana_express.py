@@ -20,6 +20,8 @@ async def main():
     started = time.monotonic()
     print("Target MMSI:", MMSI, "window: 150 seconds", flush=True)
     seen = 0
+    regional_positions = 0
+    regional_static = 0
     confirmations = 0
     target = 0
     imo_verified_in_stream = False
@@ -31,7 +33,7 @@ async def main():
                 "BoundingBoxes": BOXES,
                 "FilterMessageTypes": ["PositionReport", "StandardClassBPositionReport", "ExtendedClassBPositionReport", "ShipStaticData", "StaticDataReport"],
             }))
-            print("Regional subscription sent; local MMSI filter and IMO cross-check", flush=True)
+            print("Regional subscription sent WITHOUT server-side MMSI filter; counting all regional positions", flush=True)
             deadline = time.monotonic() + 150
             while time.monotonic() < deadline:
                 try:
@@ -52,6 +54,10 @@ async def main():
                 metadata = event.get("MetaData") or {}
                 payload = (event.get("Message") or {}).get(typ) or {}
                 mmsi = str(metadata.get("MMSI") or payload.get("UserID") or "")
+                if typ in {"PositionReport", "StandardClassBPositionReport", "ExtendedClassBPositionReport"}:
+                    regional_positions += 1
+                else:
+                    regional_static += 1
                 if mmsi != MMSI:
                     continue
                 if typ in {"ShipStaticData", "StaticDataReport"}:
@@ -65,7 +71,7 @@ async def main():
                 lat = payload.get("Latitude", metadata.get("Latitude"))
                 lon = payload.get("Longitude", metadata.get("Longitude"))
                 print("TARGET FOUND:", json.dumps({"mmsi": mmsi, "lat": lat, "lon": lon, "timestamp": metadata.get("time_utc"), "type": typ}), flush=True)
-            print("RESULT:", json.dumps({"expected_imo": IMO, "expected_mmsi": MMSI, "imo_verified_in_stream": imo_verified_in_stream, "subscription_confirmations": confirmations, "position_messages_in_region": seen, "target_mmsi_messages": target, "target_found": bool(target)}), flush=True)
+            print("RESULT:", json.dumps({"expected_imo": IMO, "expected_mmsi": MMSI, "imo_verified_in_stream": imo_verified_in_stream, "subscription_confirmations": confirmations, "position_messages_in_region": regional_positions, "static_messages_in_region": regional_static, "target_mmsi_messages": target, "target_found": bool(target)}), flush=True)
     except Exception as exc:
         print("Connection error:", type(exc).__name__, str(exc).replace(key, "[redacted]")[:200], flush=True)
         raise
