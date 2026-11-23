@@ -253,6 +253,19 @@ async def main():
         except (OSError, json.JSONDecodeError, AttributeError):
             pass
     previous.update(matched)
+    tracking = []
+    for key, entry in manifest.items():
+        position = next((v for v in previous.values() if normalize_name(v.get("schedule_name")) == key), None)
+        age = None
+        if position:
+            age = max(0, int((now - parse_time(position.get("last_seen"), now)).total_seconds()))
+        tracking.append({
+            **entry,
+            "identity_status": "mmsi_known" if entry.get("mmsi") else "mmsi_pending",
+            "position_status": "recent" if position and age is not None and age <= MAX_AGE_SECONDS else "unavailable",
+            "position_age_seconds": age,
+            "position": {k: position[k] for k in ("lat", "lon", "last_seen", "mmsi") if k in position} if position else None,
+        })
     result = {
         "updated_at": now.isoformat(),
         "source": "AISStream",
@@ -269,6 +282,7 @@ async def main():
         "unique_mmsi_in_window": len(matched),
         "coverage_confirmed": bool(matched),
         "vessels": sorted(previous.values(), key=lambda vessel: vessel["name"].casefold()),
+        "tracking": sorted(tracking, key=lambda vessel: vessel.get("eta", "")),
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     temp = OUTPUT.with_suffix(".json.tmp")
