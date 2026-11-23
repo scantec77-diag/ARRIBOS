@@ -4,8 +4,8 @@
     {
       "name": "MSC CASSANDRE",
       "imo": "9785471",
-      "mmsi": null,
-      "identity_source": "MarineTraffic screenshot supplied by user",
+      "mmsi": "636021364",
+      "identity_source": "VesselFinder vessel particulars https://www.vesselfinder.com/vessels/details/9785471 (IMO/MMSI match; checked 2026-11-22)",
       "position_reference": {
         "place": "Navegantes, Santa Catarina, Brasil",
         "speed_kmh": 0,
@@ -14,7 +14,8 @@
       },
       "destination": "EXOLGAN",
       "scheduled_eta_local": "2026-11-24T00:00:00",
-      "timezone": "America/Argentina/Buenos_Aires"
+      "timezone": "America/Argentina/Buenos_Aires",
+      "identity_verified_at": "2026-11-22"
     }
   ]
 }
