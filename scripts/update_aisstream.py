@@ -163,7 +163,7 @@ async def capture(window_seconds=WINDOW_SECONDS):
     async with websockets.connect(
         "wss://stream.aisstream.io/v0/stream",
         compression="deflate",
-        open_timeout=15,
+        open_timeout=30,
         close_timeout=5,
     ) as ws:
         await ws.send(json.dumps({
