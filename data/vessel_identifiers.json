@@ -37,6 +37,13 @@
       "mmsi": "255803450",
       "identity_source": "VesselFinder https://www.vesselfinder.com/vessels/details/9393319",
       "identity_verified_at": "2026-11-22"
+    },
+    {
+      "name": "PARANA EXPRESS",
+      "imo": "9793909",
+      "mmsi": "563282300",
+      "identity_source": "VesselFinder https://www.vesselfinder.com/vessels/details/9793909",
+      "identity_verified_at": "2026-11-22"
     }
   ]
 }
