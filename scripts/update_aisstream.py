@@ -19,6 +19,7 @@ BOX = [
 ]
 OUTPUT = Path("data/ais.json")
 EXOLGAN_DATA = Path("data/exolgan.json")
+IDENTIFIERS_DATA = Path("data/vessel_identifiers.json")
 WINDOW_SECONDS = 120
 MAX_TOTAL_SECONDS = 170
 MAX_AGE_SECONDS = 30 * 60
@@ -63,9 +64,24 @@ def is_exolgan_status(value):
     )
 
 
+def load_verified_identifiers():
+    """Read reusable identity records; an unverified or missing MMSI is not a match."""
+    if not IDENTIFIERS_DATA.exists():
+        return {}
+    data = json.loads(IDENTIFIERS_DATA.read_text(encoding="utf-8"))
+    result = {}
+    for item in data.get("vessels", []):
+        key = normalize_name(item.get("name"))
+        mmsi = str(item.get("mmsi") or "").strip()
+        if key and mmsi.isdigit() and len(mmsi) == 9:
+            result[key] = {"mmsi": mmsi, "imo": str(item.get("imo") or "")}
+    return result
+
+
 def load_exolgan_manifest():
     data = json.loads(EXOLGAN_DATA.read_text(encoding="utf-8"))
     manifest = {}
+    identifiers = load_verified_identifiers()
     for vessel in data.get("vessels", []):
         if normalize_name(vessel.get("terminal")) != "exolgan":
             continue
@@ -77,7 +93,8 @@ def load_exolgan_manifest():
                 "schedule_name": vessel.get("name", ""),
                 "schedule_status": vessel.get("status", ""),
                 "eta": vessel.get("eta", ""),
-                "mmsi": str(vessel.get("mmsi") or "").strip(),
+                "mmsi": str(vessel.get("mmsi") or identifiers.get(key, {}).get("mmsi") or "").strip(),
+                "imo": str(vessel.get("imo") or identifiers.get(key, {}).get("imo") or "").strip(),
             }
     if not manifest:
         raise RuntimeError("La programación no contiene buques activos de Exolgan.")
