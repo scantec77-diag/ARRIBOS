@@ -8,7 +8,10 @@ import websockets
 MMSI = "563282300"
 IMO = "9793909"
 URL = "wss://stream.aisstream.io/v0/stream"
-BOXES = [[[-90.0, -180.0], [90.0, 180.0]]]  # Global AISStream subscription
+BOXES = [
+    [[-35.20, -59.80], [-33.70, -57.00]],  # Buenos Aires / Dock Sud
+    [[-37.50, -60.50], [-32.00, -52.00]],  # Rio de la Plata and Atlantic approaches
+]
 
 async def main():
     key = os.getenv("AISSTREAM_API_KEY", "").strip()
@@ -26,10 +29,9 @@ async def main():
             await ws.send(json.dumps({
                 "APIKey": key,
                 "BoundingBoxes": BOXES,
-                "FiltersShipMMSI": [int(MMSI)],
                 "FilterMessageTypes": ["PositionReport", "StandardClassBPositionReport", "ExtendedClassBPositionReport", "ShipStaticData", "StaticDataReport"],
             }))
-            print("Worldwide subscription sent; server-side MMSI filter and IMO cross-check", flush=True)
+            print("Regional subscription sent; local MMSI filter and IMO cross-check", flush=True)
             deadline = time.monotonic() + 150
             while time.monotonic() < deadline:
                 try:
