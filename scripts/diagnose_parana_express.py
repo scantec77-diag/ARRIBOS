@@ -18,10 +18,11 @@ async def main():
     if not key:
         raise SystemExit("AISSTREAM_API_KEY missing")
     started = time.monotonic()
-    print("Target MMSI:", MMSI, "window: 150 seconds", flush=True)
+    print("Target MMSI:", MMSI, "window: 600 seconds", flush=True)
     seen = 0
     regional_positions = 0
     regional_static = 0
+    observed_mmsis = set()
     confirmations = 0
     target = 0
     imo_verified_in_stream = False
@@ -34,7 +35,7 @@ async def main():
                 "FilterMessageTypes": ["PositionReport", "StandardClassBPositionReport", "ExtendedClassBPositionReport", "ShipStaticData", "StaticDataReport"],
             }))
             print("Regional subscription sent WITHOUT server-side MMSI filter; counting all regional positions", flush=True)
-            deadline = time.monotonic() + 150
+            deadline = time.monotonic() + 600
             while time.monotonic() < deadline:
                 try:
                     event = json.loads(await asyncio.wait_for(ws.recv(), timeout=min(15, max(.1, deadline-time.monotonic()))))
@@ -54,6 +55,8 @@ async def main():
                 metadata = event.get("MetaData") or {}
                 payload = (event.get("Message") or {}).get(typ) or {}
                 mmsi = str(metadata.get("MMSI") or payload.get("UserID") or "")
+                if mmsi:
+                    observed_mmsis.add(mmsi)
                 if typ in {"PositionReport", "StandardClassBPositionReport", "ExtendedClassBPositionReport"}:
                     regional_positions += 1
                 else:
@@ -71,7 +74,7 @@ async def main():
                 lat = payload.get("Latitude", metadata.get("Latitude"))
                 lon = payload.get("Longitude", metadata.get("Longitude"))
                 print("TARGET FOUND:", json.dumps({"mmsi": mmsi, "lat": lat, "lon": lon, "timestamp": metadata.get("time_utc"), "type": typ}), flush=True)
-            print("RESULT:", json.dumps({"expected_imo": IMO, "expected_mmsi": MMSI, "imo_verified_in_stream": imo_verified_in_stream, "subscription_confirmations": confirmations, "position_messages_in_region": regional_positions, "static_messages_in_region": regional_static, "target_mmsi_messages": target, "target_found": bool(target)}), flush=True)
+            print("RESULT:", json.dumps({"expected_imo": IMO, "expected_mmsi": MMSI, "imo_verified_in_stream": imo_verified_in_stream, "subscription_confirmations": confirmations, "position_messages_in_region": regional_positions, "static_messages_in_region": regional_static, "target_mmsi_messages": target, "target_found": bool(target), "unique_mmsis_in_region": len(observed_mmsis), "observed_mmsis": sorted(observed_mmsis)}), flush=True)
     except Exception as exc:
         print("Connection error:", type(exc).__name__, str(exc).replace(key, "[redacted]")[:200], flush=True)
         raise
