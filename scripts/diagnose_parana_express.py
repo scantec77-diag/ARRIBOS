@@ -8,8 +8,8 @@ import websockets
 MMSI = "563282300"
 URL = "wss://stream.aisstream.io/v0/stream"
 BOXES = [
-    [[-34.80, -58.60], [-34.45, -58.15]],  # Dock Sud / Buenos Aires
-    [[-36.20, -59.50], [-33.50, -55.00]],  # Rio de la Plata / approaches
+    [[-35.20, -59.80], [-33.70, -57.00]],  # Buenos Aires / Dock Sud / inland approaches
+    [[-37.50, -60.50], [-32.00, -52.00]],  # Rio de la Plata / Uruguay / Atlantic approaches
 ]
 
 async def main():
