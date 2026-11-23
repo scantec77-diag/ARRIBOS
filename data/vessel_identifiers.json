@@ -16,6 +16,27 @@
       "scheduled_eta_local": "2026-11-24T00:00:00",
       "timezone": "America/Argentina/Buenos_Aires",
       "identity_verified_at": "2026-11-22"
+    },
+    {
+      "name": "ONE AMAZON",
+      "imo": "9937323",
+      "mmsi": "563290400",
+      "identity_source": "VesselFinder https://www.vesselfinder.com/vessels/details/9937323",
+      "identity_verified_at": "2026-11-22"
+    },
+    {
+      "name": "COSTA RICA EXPRESS",
+      "imo": "9641235",
+      "mmsi": "538004914",
+      "identity_source": "VesselFinder https://www.vesselfinder.com/vessels/details/9641235",
+      "identity_verified_at": "2026-11-22"
+    },
+    {
+      "name": "MSC RIKKU",
+      "imo": "9393319",
+      "mmsi": "255803450",
+      "identity_source": "VesselFinder https://www.vesselfinder.com/vessels/details/9393319",
+      "identity_verified_at": "2026-11-22"
     }
   ]
 }
