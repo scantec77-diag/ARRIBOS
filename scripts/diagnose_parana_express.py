@@ -36,6 +36,9 @@ async def main():
                     event = json.loads(await asyncio.wait_for(ws.recv(), timeout=min(15, max(.1, deadline-time.monotonic()))))
                 except asyncio.TimeoutError:
                     continue
+                except websockets.exceptions.ConnectionClosed as exc:
+                    print("AISStream disconnected before deadline:", type(exc).__name__, flush=True)
+                    break
                 typ = event.get("MessageType", "")
                 if typ == "SubscriptionConfirmation":
                     confirmations += 1
