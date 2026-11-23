@@ -1,19 +1,16 @@
 {
-  "updated_at": "2026-11-23T00:15:32.493827+00:00",
+  "updated_at": "2026-11-23T00:20:47.694648+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
   "window_seconds": 120,
   "max_total_seconds": 170,
-  "attempts_made": 3,
+  "attempts_made": 4,
   "max_retries": 3,
   "last_error": "TimeoutError: timed out during opening handshake",
-  "message_count": 2,
-  "messages": {
-    "PositionReport": 1,
-    "StandardClassBPositionReport": 1
-  },
-  "region_vessels_in_window": 2,
+  "message_count": 0,
+  "messages": {},
+  "region_vessels_in_window": 0,
   "unique_mmsi_in_window": 0,
   "coverage_confirmed": false,
   "vessels": []
