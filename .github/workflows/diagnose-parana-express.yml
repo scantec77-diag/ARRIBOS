@@ -1,0 +1,21 @@
+name: Diagnose PARANA EXPRESS AIS
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install 'websockets>=12,<16'
+      - name: Track PARANA EXPRESS by MMSI and cross-check IMO
+        env:
+          AISSTREAM_API_KEY: ${{ secrets.AISSTREAM_API_KEY }}
+        run: python scripts/diagnose_parana_express.py
