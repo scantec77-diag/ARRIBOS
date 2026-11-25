@@ -1,19 +1,18 @@
 {
-  "updated_at": "2026-11-25T04:33:28.825563+00:00",
+  "updated_at": "2026-11-25T14:53:10.752111+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
   "window_seconds": 120,
   "max_total_seconds": 170,
-  "attempts_made": 3,
+  "attempts_made": 2,
   "max_retries": 3,
   "last_error": "AIS recibió posiciones, pero ninguna coincidió con la lista activa de Exolgan.",
-  "message_count": 2,
+  "message_count": 4,
   "messages": {
-    "StandardClassBPositionReport": 1,
-    "PositionReport": 1
+    "PositionReport": 4
   },
-  "region_vessels_in_window": 2,
+  "region_vessels_in_window": 4,
   "unique_mmsi_in_window": 0,
   "coverage_confirmed": false,
   "vessels": [],
@@ -76,7 +75,7 @@
     {
       "schedule_name": "MSC CASSANDRE",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-11-25T07:00",
+      "eta": "2026-11-26T01:00",
       "mmsi": "636021364",
       "imo": "9785471",
       "identity_status": "mmsi_known",
@@ -85,20 +84,9 @@
       "position": null
     },
     {
-      "schedule_name": "ONE AMAZON",
-      "schedule_status": "EN VIAJE",
-      "eta": "2026-11-26T00:00",
-      "mmsi": "563290400",
-      "imo": "9937323",
-      "identity_status": "mmsi_known",
-      "position_status": "unavailable",
-      "position_age_seconds": null,
-      "position": null
-    },
-    {
       "schedule_name": "COSTA RICA EXPRESS",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-11-26T03:00",
+      "eta": "2026-11-27T03:00",
       "mmsi": "538004914",
       "imo": "9641235",
       "identity_status": "mmsi_known",
@@ -107,9 +95,20 @@
       "position": null
     },
     {
+      "schedule_name": "ONE AMAZON",
+      "schedule_status": "EN VIAJE",
+      "eta": "2026-11-28T12:00",
+      "mmsi": "563290400",
+      "imo": "9937323",
+      "identity_status": "mmsi_known",
+      "position_status": "unavailable",
+      "position_age_seconds": null,
+      "position": null
+    },
+    {
       "schedule_name": "MSC RIKKU",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-11-28T05:00",
+      "eta": "2026-11-30T07:00",
       "mmsi": "255803450",
       "imo": "9393319",
       "identity_status": "mmsi_known",
@@ -120,7 +119,7 @@
     {
       "schedule_name": "MSC AINO",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-11-29T15:00",
+      "eta": "2026-12-01T18:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -142,7 +141,7 @@
     {
       "schedule_name": "MSC MIGSAN",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-12-02T22:00",
+      "eta": "2026-12-03T15:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -186,7 +185,18 @@
     {
       "schedule_name": "GSL NINGBO",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-12-11T00:00",
+      "eta": "2026-12-11T07:00",
+      "mmsi": "",
+      "imo": "",
+      "identity_status": "mmsi_pending",
+      "position_status": "unavailable",
+      "position_age_seconds": null,
+      "position": null
+    },
+    {
+      "schedule_name": "ONE MAGDALENA",
+      "schedule_status": "EN VIAJE",
+      "eta": "2026-12-15T00:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -220,17 +230,6 @@
       "schedule_name": "XIAMEN EXPRESS",
       "schedule_status": "EN VIAJE",
       "eta": "2026-12-21T00:00",
-      "mmsi": "",
-      "imo": "",
-      "identity_status": "mmsi_pending",
-      "position_status": "unavailable",
-      "position_age_seconds": null,
-      "position": null
-    },
-    {
-      "schedule_name": "ONE MAGDALENA",
-      "schedule_status": "EN VIAJE",
-      "eta": "2026-12-23T20:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
