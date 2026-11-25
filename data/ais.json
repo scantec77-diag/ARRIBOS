@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T21:33:18.319587+00:00",
+  "updated_at": "2026-11-25T04:33:28.825563+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
@@ -8,64 +8,20 @@
   "attempts_made": 3,
   "max_retries": 3,
   "last_error": "AIS recibió posiciones, pero ninguna coincidió con la lista activa de Exolgan.",
-  "message_count": 3,
+  "message_count": 2,
   "messages": {
-    "PositionReport": 2,
-    "StandardClassBPositionReport": 1
+    "StandardClassBPositionReport": 1,
+    "PositionReport": 1
   },
-  "region_vessels_in_window": 3,
+  "region_vessels_in_window": 2,
   "unique_mmsi_in_window": 0,
   "coverage_confirmed": false,
   "vessels": [],
   "tracking": [
     {
-      "schedule_name": "MSC AVNI",
-      "schedule_status": "ARRIBADO",
-      "eta": "2026-11-07T01:00",
-      "mmsi": "",
-      "imo": "",
-      "identity_status": "mmsi_pending",
-      "position_status": "unavailable",
-      "position_age_seconds": null,
-      "position": null
-    },
-    {
-      "schedule_name": "PALENA",
-      "schedule_status": "ARRIBADO",
-      "eta": "2026-11-07T12:00",
-      "mmsi": "",
-      "imo": "",
-      "identity_status": "mmsi_pending",
-      "position_status": "unavailable",
-      "position_age_seconds": null,
-      "position": null
-    },
-    {
-      "schedule_name": "MSC ADELE",
-      "schedule_status": "ARRIBADO",
-      "eta": "2026-11-09T11:00",
-      "mmsi": "",
-      "imo": "",
-      "identity_status": "mmsi_pending",
-      "position_status": "unavailable",
-      "position_age_seconds": null,
-      "position": null
-    },
-    {
-      "schedule_name": "PATMOS EXPRESS",
-      "schedule_status": "ARRIBADO",
-      "eta": "2026-11-13T07:00",
-      "mmsi": "",
-      "imo": "",
-      "identity_status": "mmsi_pending",
-      "position_status": "unavailable",
-      "position_age_seconds": null,
-      "position": null
-    },
-    {
       "schedule_name": "ONE PARANA",
       "schedule_status": "ARRIBADO",
-      "eta": "2026-11-16T04:00",
+      "eta": "2026-11-16T04:10",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -97,8 +53,8 @@
     },
     {
       "schedule_name": "MSC JEONGMIN",
-      "schedule_status": "EN VIAJE",
-      "eta": "2026-11-20T21:00",
+      "schedule_status": "ARRIBADO",
+      "eta": "2026-11-21T01:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -108,7 +64,7 @@
     },
     {
       "schedule_name": "PARANA EXPRESS",
-      "schedule_status": "EN VIAJE",
+      "schedule_status": "ARRIBADO",
       "eta": "2026-11-22T05:00",
       "mmsi": "563282300",
       "imo": "9793909",
@@ -120,7 +76,7 @@
     {
       "schedule_name": "MSC CASSANDRE",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-11-24T00:00",
+      "eta": "2026-11-25T07:00",
       "mmsi": "636021364",
       "imo": "9785471",
       "identity_status": "mmsi_known",
@@ -131,7 +87,7 @@
     {
       "schedule_name": "ONE AMAZON",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-11-25T20:00",
+      "eta": "2026-11-26T00:00",
       "mmsi": "563290400",
       "imo": "9937323",
       "identity_status": "mmsi_known",
@@ -153,7 +109,7 @@
     {
       "schedule_name": "MSC RIKKU",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-11-28T08:00",
+      "eta": "2026-11-28T05:00",
       "mmsi": "255803450",
       "imo": "9393319",
       "identity_status": "mmsi_known",
@@ -164,7 +120,7 @@
     {
       "schedule_name": "MSC AINO",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-12-01T08:00",
+      "eta": "2026-11-29T15:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -184,9 +140,9 @@
       "position": null
     },
     {
-      "schedule_name": "LE HAVRE",
+      "schedule_name": "MSC MIGSAN",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-12-04T12:00",
+      "eta": "2026-12-02T22:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -195,9 +151,9 @@
       "position": null
     },
     {
-      "schedule_name": "MSC MIGSAN",
+      "schedule_name": "LE HAVRE",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-12-06T08:00",
+      "eta": "2026-12-05T07:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -209,6 +165,28 @@
       "schedule_name": "SAO PAULO EXPRESS",
       "schedule_status": "EN VIAJE",
       "eta": "2026-12-08T20:00",
+      "mmsi": "",
+      "imo": "",
+      "identity_status": "mmsi_pending",
+      "position_status": "unavailable",
+      "position_age_seconds": null,
+      "position": null
+    },
+    {
+      "schedule_name": "MSC DOMITILLE",
+      "schedule_status": "EN VIAJE",
+      "eta": "2026-12-10T14:00",
+      "mmsi": "",
+      "imo": "",
+      "identity_status": "mmsi_pending",
+      "position_status": "unavailable",
+      "position_age_seconds": null,
+      "position": null
+    },
+    {
+      "schedule_name": "GSL NINGBO",
+      "schedule_status": "EN VIAJE",
+      "eta": "2026-12-11T00:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -239,9 +217,42 @@
       "position": null
     },
     {
+      "schedule_name": "XIAMEN EXPRESS",
+      "schedule_status": "EN VIAJE",
+      "eta": "2026-12-21T00:00",
+      "mmsi": "",
+      "imo": "",
+      "identity_status": "mmsi_pending",
+      "position_status": "unavailable",
+      "position_age_seconds": null,
+      "position": null
+    },
+    {
       "schedule_name": "ONE MAGDALENA",
       "schedule_status": "EN VIAJE",
       "eta": "2026-12-23T20:00",
+      "mmsi": "",
+      "imo": "",
+      "identity_status": "mmsi_pending",
+      "position_status": "unavailable",
+      "position_age_seconds": null,
+      "position": null
+    },
+    {
+      "schedule_name": "CAPE ARTEMISSIO",
+      "schedule_status": "EN VIAJE",
+      "eta": "2026-12-28T00:00",
+      "mmsi": "",
+      "imo": "",
+      "identity_status": "mmsi_pending",
+      "position_status": "unavailable",
+      "position_age_seconds": null,
+      "position": null
+    },
+    {
+      "schedule_name": "MSC RAYSHMI",
+      "schedule_status": "EN VIAJE",
+      "eta": "2027-01-06T00:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",

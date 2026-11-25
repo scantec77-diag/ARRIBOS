@@ -1,41 +1,11 @@
 {
-  "updated_at": "2026-11-24T21:30:21.815299+00:00",
+  "updated_at": "2026-11-25T04:30:29.162882+00:00",
   "source": "https://transcargoarg.com/",
   "timezone": "America/Argentina/Buenos_Aires",
   "vessels": [
     {
-      "name": "MSC AVNI",
-      "eta": "2026-11-07T01:00",
-      "status": "ARRIBADO",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "PALENA",
-      "eta": "2026-11-07T12:00",
-      "status": "ARRIBADO",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "MSC ADELE",
-      "eta": "2026-11-09T11:00",
-      "status": "ARRIBADO",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "DALIAN EXPRESS",
-      "eta": "2026-11-12T07:00",
-      "status": "CANCELADO",
-      "terminal": "EXOLGAN"
-    },
-    {
-      "name": "PATMOS EXPRESS",
-      "eta": "2026-11-13T07:00",
-      "status": "ARRIBADO",
-      "terminal": "EXOLGAN"
-    },
-    {
       "name": "ONE PARANA",
-      "eta": "2026-11-16T04:00",
+      "eta": "2026-11-16T04:10",
       "status": "ARRIBADO",
       "terminal": "EXOLGAN"
     },
@@ -53,25 +23,25 @@
     },
     {
       "name": "MSC JEONGMIN",
-      "eta": "2026-11-20T21:00",
-      "status": "EN VIAJE",
+      "eta": "2026-11-21T01:00",
+      "status": "ARRIBADO",
       "terminal": "EXOLGAN"
     },
     {
       "name": "PARANA EXPRESS",
       "eta": "2026-11-22T05:00",
-      "status": "EN VIAJE",
+      "status": "ARRIBADO",
       "terminal": "EXOLGAN"
     },
     {
       "name": "MSC CASSANDRE",
-      "eta": "2026-11-24T00:00",
+      "eta": "2026-11-25T07:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
     {
       "name": "ONE AMAZON",
-      "eta": "2026-11-25T20:00",
+      "eta": "2026-11-26T00:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
@@ -83,13 +53,13 @@
     },
     {
       "name": "MSC RIKKU",
-      "eta": "2026-11-28T08:00",
+      "eta": "2026-11-28T05:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
     {
       "name": "MSC AINO",
-      "eta": "2026-12-01T08:00",
+      "eta": "2026-11-29T15:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
@@ -100,20 +70,32 @@
       "terminal": "EXOLGAN"
     },
     {
-      "name": "LE HAVRE",
-      "eta": "2026-12-04T12:00",
+      "name": "MSC MIGSAN",
+      "eta": "2026-12-02T22:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
     {
-      "name": "MSC MIGSAN",
-      "eta": "2026-12-06T08:00",
+      "name": "LE HAVRE",
+      "eta": "2026-12-05T07:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
     {
       "name": "SAO PAULO EXPRESS",
       "eta": "2026-12-08T20:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC DOMITILLE",
+      "eta": "2026-12-10T14:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "GSL NINGBO",
+      "eta": "2026-12-11T00:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
@@ -130,8 +112,26 @@
       "terminal": "EXOLGAN"
     },
     {
+      "name": "XIAMEN EXPRESS",
+      "eta": "2026-12-21T00:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
       "name": "ONE MAGDALENA",
       "eta": "2026-12-23T20:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "CAPE ARTEMISSIO",
+      "eta": "2026-12-28T00:00",
+      "status": "EN VIAJE",
+      "terminal": "EXOLGAN"
+    },
+    {
+      "name": "MSC RAYSHMI",
+      "eta": "2027-01-06T00:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     }
@@ -988,6 +988,136 @@
       "type": "eta",
       "before": "2026-12-03T02:00",
       "after": "2026-11-28T08:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "ONE PARANA",
+      "type": "eta",
+      "before": "2026-11-16T04:00",
+      "after": "2026-11-16T04:10"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "MSC JEONGMIN",
+      "type": "eta",
+      "before": "2026-11-20T21:00",
+      "after": "2026-11-21T01:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "MSC JEONGMIN",
+      "type": "estado",
+      "before": "EN VIAJE",
+      "after": "ARRIBADO"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "PARANA EXPRESS",
+      "type": "estado",
+      "before": "EN VIAJE",
+      "after": "ARRIBADO"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "MSC CASSANDRE",
+      "type": "eta",
+      "before": "2026-11-24T00:00",
+      "after": "2026-11-25T07:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "ONE AMAZON",
+      "type": "eta",
+      "before": "2026-11-25T20:00",
+      "after": "2026-11-26T00:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "MSC RIKKU",
+      "type": "eta",
+      "before": "2026-11-28T08:00",
+      "after": "2026-11-28T05:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "MSC AINO",
+      "type": "eta",
+      "before": "2026-12-01T08:00",
+      "after": "2026-11-29T15:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "MSC MIGSAN",
+      "type": "eta",
+      "before": "2026-12-06T08:00",
+      "after": "2026-12-02T22:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "LE HAVRE",
+      "type": "eta",
+      "before": "2026-12-04T12:00",
+      "after": "2026-12-05T07:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "MSC DOMITILLE",
+      "type": "nuevo",
+      "eta": "2026-12-10T14:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "GSL NINGBO",
+      "type": "nuevo",
+      "eta": "2026-12-11T00:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "XIAMEN EXPRESS",
+      "type": "nuevo",
+      "eta": "2026-12-21T00:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "CAPE ARTEMISSIO",
+      "type": "nuevo",
+      "eta": "2026-12-28T00:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "MSC RAYSHMI",
+      "type": "nuevo",
+      "eta": "2027-01-06T00:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "MSC AVNI",
+      "type": "ausente_de_lista",
+      "before": "2026-11-07T01:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "PALENA",
+      "type": "ausente_de_lista",
+      "before": "2026-11-07T12:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "MSC ADELE",
+      "type": "ausente_de_lista",
+      "before": "2026-11-09T11:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "DALIAN EXPRESS",
+      "type": "ausente_de_lista",
+      "before": "2026-11-12T07:00"
+    },
+    {
+      "at": "2026-11-25T04:30:29.162882+00:00",
+      "ship": "PATMOS EXPRESS",
+      "type": "ausente_de_lista",
+      "before": "2026-11-13T07:00"
     }
   ]
 }
