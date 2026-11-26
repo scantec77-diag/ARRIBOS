@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T05:12:48.092288+00:00",
+  "updated_at": "2026-11-26T23:52:23.478388+00:00",
   "source": "https://transcargoarg.com/",
   "timezone": "America/Argentina/Buenos_Aires",
   "vessels": [
@@ -36,18 +36,18 @@
     {
       "name": "MSC CASSANDRE",
       "eta": "2026-11-26T01:00",
-      "status": "EN VIAJE",
+      "status": "ARRIBADO",
       "terminal": "EXOLGAN"
     },
     {
       "name": "COSTA RICA EXPRESS",
-      "eta": "2026-11-27T03:00",
+      "eta": "2026-11-27T02:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
     {
       "name": "ONE AMAZON",
-      "eta": "2026-11-28T12:00",
+      "eta": "2026-11-28T11:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
@@ -59,7 +59,7 @@
     },
     {
       "name": "MSC AINO",
-      "eta": "2026-12-01T18:00",
+      "eta": "2026-12-01T20:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
@@ -71,13 +71,13 @@
     },
     {
       "name": "MSC MIGSAN",
-      "eta": "2026-12-03T15:00",
+      "eta": "2026-12-03T14:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
     {
       "name": "LE HAVRE",
-      "eta": "2026-12-05T07:00",
+      "eta": "2026-12-05T05:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
@@ -100,13 +100,13 @@
       "terminal": "EXOLGAN"
     },
     {
-      "name": "ONE MAGDALENA",
-      "eta": "2026-12-15T00:00",
+      "name": "SANTA CATARINA EXPRESS",
+      "eta": "2026-12-15T20:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
     {
-      "name": "SANTA CATARINA EXPRESS",
+      "name": "ONE MAGDALENA",
       "eta": "2026-12-15T20:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
@@ -114,24 +114,24 @@
     {
       "name": "MSC LICIA X",
       "eta": "2026-12-18T07:00",
-      "status": "EN VIAJE",
+      "status": "CANCELADO",
       "terminal": "EXOLGAN"
     },
     {
       "name": "XIAMEN EXPRESS",
-      "eta": "2026-12-21T00:00",
+      "eta": "2026-12-21T07:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
     {
-      "name": "CAPE ARTEMISSIO",
-      "eta": "2026-12-28T00:00",
+      "name": "CAPE ARTEMISIO",
+      "eta": "2026-12-22T20:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     },
     {
       "name": "MSC RAYSHMI",
-      "eta": "2027-01-06T00:00",
+      "eta": "2027-01-02T07:00",
       "status": "EN VIAJE",
       "terminal": "EXOLGAN"
     }
@@ -1174,6 +1174,88 @@
       "type": "eta",
       "before": "2026-12-23T20:00",
       "after": "2026-12-15T00:00"
+    },
+    {
+      "at": "2026-11-26T23:52:23.478388+00:00",
+      "ship": "MSC CASSANDRE",
+      "type": "estado",
+      "before": "EN VIAJE",
+      "after": "ARRIBADO"
+    },
+    {
+      "at": "2026-11-26T23:52:23.478388+00:00",
+      "ship": "COSTA RICA EXPRESS",
+      "type": "eta",
+      "before": "2026-11-27T03:00",
+      "after": "2026-11-27T02:00"
+    },
+    {
+      "at": "2026-11-26T23:52:23.478388+00:00",
+      "ship": "ONE AMAZON",
+      "type": "eta",
+      "before": "2026-11-28T12:00",
+      "after": "2026-11-28T11:00"
+    },
+    {
+      "at": "2026-11-26T23:52:23.478388+00:00",
+      "ship": "MSC AINO",
+      "type": "eta",
+      "before": "2026-12-01T18:00",
+      "after": "2026-12-01T20:00"
+    },
+    {
+      "at": "2026-11-26T23:52:23.478388+00:00",
+      "ship": "MSC MIGSAN",
+      "type": "eta",
+      "before": "2026-12-03T15:00",
+      "after": "2026-12-03T14:00"
+    },
+    {
+      "at": "2026-11-26T23:52:23.478388+00:00",
+      "ship": "LE HAVRE",
+      "type": "eta",
+      "before": "2026-12-05T07:00",
+      "after": "2026-12-05T05:00"
+    },
+    {
+      "at": "2026-11-26T23:52:23.478388+00:00",
+      "ship": "ONE MAGDALENA",
+      "type": "eta",
+      "before": "2026-12-15T00:00",
+      "after": "2026-12-15T20:00"
+    },
+    {
+      "at": "2026-11-26T23:52:23.478388+00:00",
+      "ship": "MSC LICIA X",
+      "type": "estado",
+      "before": "EN VIAJE",
+      "after": "CANCELADO"
+    },
+    {
+      "at": "2026-11-26T23:52:23.478388+00:00",
+      "ship": "XIAMEN EXPRESS",
+      "type": "eta",
+      "before": "2026-12-21T00:00",
+      "after": "2026-12-21T07:00"
+    },
+    {
+      "at": "2026-11-26T23:52:23.478388+00:00",
+      "ship": "CAPE ARTEMISIO",
+      "type": "nuevo",
+      "eta": "2026-12-22T20:00"
+    },
+    {
+      "at": "2026-11-26T23:52:23.478388+00:00",
+      "ship": "MSC RAYSHMI",
+      "type": "eta",
+      "before": "2027-01-06T00:00",
+      "after": "2027-01-02T07:00"
+    },
+    {
+      "at": "2026-11-26T23:52:23.478388+00:00",
+      "ship": "CAPE ARTEMISSIO",
+      "type": "ausente_de_lista",
+      "before": "2026-12-28T00:00"
     }
   ]
 }

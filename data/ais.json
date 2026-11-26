@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T05:15:38.686425+00:00",
+  "updated_at": "2026-11-26T23:55:16.923615+00:00",
   "source": "AISStream",
   "area": "Dock Sud / Río de la Plata",
   "timezone": "America/Argentina/Buenos_Aires",
@@ -7,10 +7,12 @@
   "max_total_seconds": 170,
   "attempts_made": 2,
   "max_retries": 3,
-  "last_error": "TimeoutError: timed out during opening handshake",
-  "message_count": 0,
-  "messages": {},
-  "region_vessels_in_window": 0,
+  "last_error": "No se recibieron posiciones AIS durante la captura.",
+  "message_count": 1,
+  "messages": {
+    "PositionReport": 1
+  },
+  "region_vessels_in_window": 1,
   "unique_mmsi_in_window": 0,
   "coverage_confirmed": false,
   "vessels": [],
@@ -72,7 +74,7 @@
     },
     {
       "schedule_name": "MSC CASSANDRE",
-      "schedule_status": "EN VIAJE",
+      "schedule_status": "ARRIBADO",
       "eta": "2026-11-26T01:00",
       "mmsi": "636021364",
       "imo": "9785471",
@@ -84,7 +86,7 @@
     {
       "schedule_name": "COSTA RICA EXPRESS",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-11-27T03:00",
+      "eta": "2026-11-27T02:00",
       "mmsi": "538004914",
       "imo": "9641235",
       "identity_status": "mmsi_known",
@@ -95,7 +97,7 @@
     {
       "schedule_name": "ONE AMAZON",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-11-28T12:00",
+      "eta": "2026-11-28T11:00",
       "mmsi": "563290400",
       "imo": "9937323",
       "identity_status": "mmsi_known",
@@ -117,7 +119,7 @@
     {
       "schedule_name": "MSC AINO",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-12-01T18:00",
+      "eta": "2026-12-01T20:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -139,7 +141,7 @@
     {
       "schedule_name": "MSC MIGSAN",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-12-03T15:00",
+      "eta": "2026-12-03T14:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -150,7 +152,7 @@
     {
       "schedule_name": "LE HAVRE",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-12-05T07:00",
+      "eta": "2026-12-05T05:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -192,17 +194,6 @@
       "position": null
     },
     {
-      "schedule_name": "ONE MAGDALENA",
-      "schedule_status": "EN VIAJE",
-      "eta": "2026-12-15T00:00",
-      "mmsi": "",
-      "imo": "",
-      "identity_status": "mmsi_pending",
-      "position_status": "unavailable",
-      "position_age_seconds": null,
-      "position": null
-    },
-    {
       "schedule_name": "SANTA CATARINA EXPRESS",
       "schedule_status": "EN VIAJE",
       "eta": "2026-12-15T20:00",
@@ -214,9 +205,9 @@
       "position": null
     },
     {
-      "schedule_name": "MSC LICIA X",
+      "schedule_name": "ONE MAGDALENA",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-12-18T07:00",
+      "eta": "2026-12-15T20:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -227,7 +218,7 @@
     {
       "schedule_name": "XIAMEN EXPRESS",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-12-21T00:00",
+      "eta": "2026-12-21T07:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -236,9 +227,9 @@
       "position": null
     },
     {
-      "schedule_name": "CAPE ARTEMISSIO",
+      "schedule_name": "CAPE ARTEMISIO",
       "schedule_status": "EN VIAJE",
-      "eta": "2026-12-28T00:00",
+      "eta": "2026-12-22T20:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
@@ -249,7 +240,7 @@
     {
       "schedule_name": "MSC RAYSHMI",
       "schedule_status": "EN VIAJE",
-      "eta": "2027-01-06T00:00",
+      "eta": "2027-01-02T07:00",
       "mmsi": "",
       "imo": "",
       "identity_status": "mmsi_pending",
